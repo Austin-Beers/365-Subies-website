@@ -3,7 +3,7 @@ const ETSEY_SEARCH_URL = ''
 const WALMART_SEARCH_URL = ''
 let headerState = {pageStage: "start"}
 function getDataFromApi1(searchTerm, callback) {
-  const settings1 = {
+  const settings = {
     url: EBAY_SEARCH_URL,
     data: {
       part: 'snippet',
@@ -17,11 +17,11 @@ function getDataFromApi1(searchTerm, callback) {
     success: callback
   };
 
-  $.ajax(settings1);
+  $.ajax(settings);
 }
 
 function getDataFromApi2(searchTerm, callback) {
-  const settings2 = {
+  const settings = {
     url: ETSEY_SEARCH_URL,
     data: {
       part: 'snippet',
@@ -35,11 +35,11 @@ function getDataFromApi2(searchTerm, callback) {
     success: callback
   };
 
-  $.ajax(settings2);
+  $.ajax(settings);
 }
 
 function getDataFromApi3(searchTerm, callback) {
-  const settings3 = {
+  const settings = {
     url: WALMART_SEARCH_URL,
     data: {
       part: 'snippet',
@@ -53,7 +53,7 @@ function getDataFromApi3(searchTerm, callback) {
     success: callback
   };
 
-  $.ajax(settings3);
+  $.ajax(settings);
 }
 function renderStartPage(){
   headerState.gameStage = "start";
@@ -62,15 +62,15 @@ const galleryButton = `<button class="gallery-button">blah2</button`;
 const AAbutton =`<button class="AA-button">blah3</button>`;
 const heading = `<h1>365 Subaru</h1>`;
 $(".start-page").html(heading + partsbutton + galleryButton + AAbutton);
-document.getElementById("parts-button").addEventListener("click", function(){
+$("parts-button").click(function(){
     renderPartsPage();
   $(".start-page").html("");
 });
-document.getElementById("gallery-button").addEventListener("click", function(){
+$("gallery-button").click(function(){
     renderGalleryPage();
   $(".start-page").html("");
 });
-document.getElementById("AA-button").addEventListener("click", function(){
+$("AA-button").click(function(){
     renderAAPage();
   $(".start-page").html("");
 });
@@ -86,3 +86,18 @@ function renderAAPage(){
   headerState.gameStage = "AA";
 }
 
+function displayEtsyData(data){
+    let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.pageInfo.totalResults}</span> result(s).</h5>`;
+        const searchResults = data.items.map((item, index) => renderResult(item));
+    $(".totalNum").html(totalResultsFnd);
+}
+
+function displayEbayData(data){
+    let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.pageInfo.totalResults}</span> result(s).</h5>`;
+        const searchResults = data.items.map((item, index) => renderResult(item));
+    $(".totalNum").html(totalResultsFnd);
+}
+
+function displayWalmartData(data){
+    //how do I add the searches together interm of compining the data in the dom and presenting it to the html?
+}
