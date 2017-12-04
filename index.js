@@ -1,8 +1,8 @@
 const EBAY_SEARCH_URL = ''
-const ETSEY_SEARCH_URL = ''
-const WALMART_SEARCH_URL = ''
+const ETSY_SEARCH_URL = ''
+const WALMART_SEARCH_URL = 'http://api.walmartlabs.com/v1/search'
 let headerState = {pageStage: "start"}
-function getDataFromApi1(searchTerm, callback) {
+function getDataFromEbay(searchTerm, callback) {
   const settings = {
     url: EBAY_SEARCH_URL,
     data: {
@@ -17,10 +17,21 @@ function getDataFromApi1(searchTerm, callback) {
     success: callback
   };
 
-  $.ajax(settings);
+  return $.ajax(settings);
 }
 
-function getDataFromApi2(searchTerm, callback) {
+function getAuthEbay(basic){
+    const credString = "AustinBe-365Subar-PRD-a5d7a0307-27e9ba44:PRD-5d7a0307fdf5-3f39-4cfd-9f74-b8ee"
+    const setting = {
+    url: "https://api.ebay.com/identity/v1/oauth2/token",
+    data: {
+    part: '',
+    key: '',
+    
+}
+}
+}
+function getDataFromApiEtsy(searchTerm, callback) {
   const settings = {
     url: ETSEY_SEARCH_URL,
     data: {
@@ -38,22 +49,38 @@ function getDataFromApi2(searchTerm, callback) {
   $.ajax(settings);
 }
 
-function getDataFromApi3(searchTerm, callback) {
+function getDataFromWalmart(searchTerm, callback) {
   const settings = {
     url: WALMART_SEARCH_URL,
     data: {
-      part: 'snippet',
-      key: '',
-      q: `${searchTerm} in:name`,
       
-      
+      apiKey: 'f4arv7xx2b3a7n6tpvezn945',
+      query: searchTerm,
     },
-    dataType: 'json',
+    dataType: 'jsonp',
     type: 'GET',
     success: callback
   };
 
   $.ajax(settings);
+}
+function makeAllRequests(searchTerm){
+    return $.when(
+        getDataFromEbay(searchTerm),
+        getDataFromApiEtsy(searchTerm),
+        getDataFromApi3(searchTerm)
+    )
+}
+function renderSearchResults(ebayData, etsyData, walmartData){
+    //build up html string with resulting itmes 
+    let HTML = ebayData.results.map(processEbayItem).map(renderResult) 
+//push results into DOM 
+}
+function processEbayItem(item){
+//take item form ebay api and return an object with thumbnail and title properties 
+}
+function renderResult(processedItem){
+return processedItem.thumbnail + " " + processedItem.title
 }
 function renderStartPage(){
   headerState.gameStage = "start";
@@ -100,4 +127,7 @@ function displayEbayData(data){
 
 function displayWalmartData(data){
     //how do I add the searches together interm of compining the data in the dom and presenting it to the html?
+console.log(data)
 }
+
+getDataFromWalmart("ipod", displayWalmartData)
