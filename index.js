@@ -69,9 +69,25 @@ function getDataFromWalmart(searchTerm, callback) {
   $.ajax(settings);
   }
 
+ function renderWalmartResult(result){
+    console.log(result, "result");
+    console.log(result.name, result.salePrice, result.thumbnailImage);
+    return `
+    <div>
+        <h2>
+            <a class="parts-search-title" href="${result.productUrl}" target="_blank">${result.name}</a>
+            <a class="parts-search-price" href="${result.productUrl}" target="_blank">${result.salePrice}</a>
+        </h2>
+        <a class="parts-search-image" href="${result.productUrl}" target="_blank"><img src="${result.thumbnailImage}</a>"
+    </div>
+`
+}
+
 function displayWalmartData(data){
-    console.log(data, "data")
+    let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.totalResults}</span> result(s).</h5>`;
+    $(".totalNum0").html(totalResultsFnd);
+    const searchResults = data.items.map((item, index) => renderWalmartResult(item));
+    $(".parts-result").html(searchResults);
 }         
 
-
-  renderStartPage();
+renderStartPage();
