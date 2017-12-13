@@ -1,4 +1,5 @@
 const WALMART_SEARCH_URL = 'https://api.walmartlabs.com/v1/search'
+const ETSY_SEARCH_URL = 'https://openapi.etsy.com/v2/listings/active'
 let headerState = {
     pageStage: "start"
 }
@@ -27,15 +28,13 @@ function renderAAPage() {
     $(".aa-page").show();
     $(".start-page").hide();
     headerState.pageStage = "AA";
-    //   $("aa-search-button").click(function(){
-    //   const searchAA = $(".aa-search-input").val()
-    //   renderEtsyResults();
     $(".aa-search-form").submit(event => {
         event.preventDefault();
-        const aaTarget = $(event.currentTarget).find("aa-search-input");
+        const aaTarget = $(event.currentTarget).find(".aa-search-input");
         const aaQuery = aaTarget.val();
-        partsTarget.val("");
-        getDatafromEtsy(aaQuery, displayEtsyData);
+        console.log(aaQuery);
+        aaTarget.val("");
+        getDataFromEtsy(aaQuery, displayEtsyData);
     });
 }
 
@@ -90,4 +89,22 @@ function displayWalmartData(data){
     $(".parts-result").html(searchResults);
 }         
 
+function getDataFromEtsy(searchTerm, callback) {
+    etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords="+
+    searchTerm+"&limit=12&includes=Images:1&api_key=6rj4kf3v2ylxpwdsr1xqxgor";
+    const settings = {
+        url: etsyURL ,
+        dataType: 'jsonp',
+        type: 'GET',
+        success: callback 
+    };
+   $.ajax(settings);
+  }
+
+  function displayEtsyData(data){
+    console.log(data, "data")
+   // let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.pageInfo.totalResults}</span> result(s).</h5>`;
+    //     const searchResults = data.items.map((item, index) => renderResult(item));
+    // $(".totalNum").html(totalResultsFnd);
+}
 renderStartPage();
