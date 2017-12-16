@@ -4,11 +4,26 @@ let headerState = {
     pageStage: "start"
 }
 
+function renderBackButton(){
+    const backButton = `<button class="back-button">back</button>`
+    $(".back-page").html(backButton)
+    $(".back-button").click(returnToStartPage)
+    $(".back-page").show()
+}
+
+function returnToStartPage(){
+    $(".start-page").show()
+    $(".back-page").hide()
+    $(".parts-page").hide()
+    $(".gallery-page").hide()
+    $(".aa-page").hide()
+}
+
 function renderStartPage() {
     headerState.gameStage = "start";
-    const partsButton = `<button class="parts-button">blah1</button>`;
-    const galleryButton = `<button class="gallery-button">blah2</button>`;
-    const AAbutton = `<button class="AA-button">blah3</button>`;
+    const partsButton = `<button class="parts-button">Search Parts</button>`;
+    const galleryButton = `<button class="gallery-button">Our Gallery</button>`;
+    const AAbutton = `<button class="AA-button">Search Accesories and Apparel </button>`;
     const heading = `<h1>365 Subaru</h1>`;
     $(".start-page").html(heading + partsButton + galleryButton + AAbutton);
     $(".parts-button").click(renderPartsPage);
@@ -18,12 +33,14 @@ function renderStartPage() {
 };
 
 function renderGalleryPage() {
+    renderBackButton()
     $(".gallery-page").show();
     $(".start-page").hide();
     headerState.pageStage = "gallery";
 }
 
 function renderAAPage() {
+    renderBackButton()
     console.log("beanbag");
     $(".aa-page").show();
     $(".start-page").hide();
@@ -39,6 +56,7 @@ function renderAAPage() {
 }
 
 function renderPartsPage() {
+    renderBackButton()
     console.log("clicked parts");
     $(".parts-page").show();
     $(".start-page").hide();
@@ -101,10 +119,25 @@ function getDataFromEtsy(searchTerm, callback) {
    $.ajax(settings);
   }
 
+  function renderEtsyResult(result){
+    console.log(result, "result");
+    console.log(result.title, result.price, result.Images[0].url_75x75);
+     return `
+     <div>
+         <h2>
+             <a class="aa-search-title" href="${result.url}" target="_blank">${result.title}</a>
+             <a class="aa-search-price" href="${result.url}" target="_blank">${result.price}</a>
+         </h2>
+         <a class="aa-search-image" href="${result.url}" target="_blank"><img src="${result.Images[0].url_75x75}"></img></a>"
+     </div>
+ `
+  }
+  
   function displayEtsyData(data){
     console.log(data, "data")
-   // let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.pageInfo.totalResults}</span> result(s).</h5>`;
-    //     const searchResults = data.items.map((item, index) => renderResult(item));
-    // $(".totalNum").html(totalResultsFnd);
+    let totalResultsFnd = `<h5> Your search returned <span class='resultNum'>${data.count}</span> result(s).</h5>`;
+    const searchResults = data.results.map((item, index) => renderEtsyResult(item));
+    $(".totalNum1").html(totalResultsFnd);
+    $(".aa-result").html(searchResults);
 }
 renderStartPage();
