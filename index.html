@@ -3,37 +3,83 @@
     <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width">
-       <title>365 Subaru</title>
+       <title>365 Subies</title>
        <link href="index.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
        <main>
-          <section class="start-page">
-            <div class="title">365 Subaru</div>
-            <form action="#" class="js-startpage-option">
-             </form>
-          </section>
-          <section class="back-page"></section>
-          <section class="parts-page">
-             <form action="#" class="parts-search-form">
-                <input type="text" class="parts-search-input">
-                <button type="submit" class="parts-search-button">Search</button>
+          <section id="start-page">
+            <section id="start-form">
+                <section id="card-content"></section>
+                <div class="bg-image"></div>
+                <div class="content-wrap">
+                  <h1>365 Subies</h1>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
+            
+             </section>
+            <section id="button-nav" class="grid">
+                <ul>
+                    <li>
+                      <div class="card">
+                        <img src="./img/IMG_4083.JPG" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Subaru Parts Search Feature</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                          <div id="parts-button-id"><div/>
+                        </div>
+                      </div> 
+                    </li>
+                    <li>
+                        <div class="card">
+                          <img src="./img/FullSizeRender (1).jpg" alt="">
+                          <div class="card-content">
+                              <h3 class="card-title">Subaru Gallery</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                              <div id="gallery-button-id"></div>
+                          </div>
+                        </div> 
+                      </li>
+                      <li>
+                        <div class="card">
+                          <img src="./img/six-stars-silhouettehistory-gabor-vida.jpg" alt="">
+                          <div class="card-content">
+                              <h3 class="card-title">Subaru Apparel and Accesories</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                              <div id="aa-button-id"></div>
+                          </div>
+                        </div> 
+                      </li>
+            
+            
+                
+            
+        </section>
+         
+            <section id="back-page"></section>
+         
+            <section id="parts-page">
+             <form action="#" id="parts-search-form">
+                <input type="text" id="parts-search-input">
+                <button type="submit" id="parts-search-button">Search</button>
             </form>
-             <div class="totalNum0" aria-live="assertive"></div>
-             <div class="parts-result" aria-live="assertive"></div>
+             <div id="totalNum0" aria-live="assertive"></div>
+             <div id="parts-result" aria-live="assertive"></div>
           </section>
-          <section class="gallery-page">
-              <div class="gallery-div"></div>
+         
+          <section id="gallery-page">
+              <div id="gallery-div"></div>
           </section>
-          <section class="aa-page">
-             <form action="#" class="aa-search-form">
-                <input type="text" class="aa-search-input">
-                <button type="submit" class="aa-search-button">Search</button>
+          
+          <section id="aa-page">
+             <form action="#" id="aa-search-form">
+                <input type="text" id="aa-search-input">
+                <button type="submit" id="aa-search-button">Search</button>
             </form>
-             <div class="totalNum1" aria-live="assertive"></div>
-             <div class="aa-result" aria-live="assertive"></div>
+            <div id="totalNum1" aria-live="assertive"></div>
+             <div id="aa-result" aria-live="assertive"></div>
           </section>
-       </main>
+       
+        </main>
        <script
        src="https://code.jquery.com/jquery-3.2.1.min.js"
        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
