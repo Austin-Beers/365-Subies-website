@@ -16,36 +16,4 @@ title{
 .back-page{
     display: none;
 }
-    @supports (display: grid) {
-@media screen and (min-width: 1200px) {
-
-    .start-page {
-    display: grid;
-    grid-template-columns: 3fr 10px 1fr;
-    grid-template-rows: 1fr 10px 1fr 10px 1fr;
-    grid-template-areas: 
-    "title . parts"
-    "title . ."
-    "title . gallery"
-    "title . ."
-    "title . aa";
-}
-
-.parts-button{
-    grid-area: parts;
-}
-
-.aa-button{
-    grid-area: aa;
-}
-
-.gallery-buttton{
-    grid-area: gallery;
-}
-
-.title{
-    grid-area: title;
-}
-
-    }
-}
+    
