@@ -87,6 +87,32 @@ img {
     color: #333;
   }
 
+#parts-form{
+        min-height: 450px;
+        color: #fff;
+        text-align: center;
+}
+    
+#parts-form .bg-image2 {
+        position: absolute;
+        background: #333
+         url("./img/pexels-photo-13918_1_.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 450px;
+        z-index: -1;
+        opacity: 0.6;
+      }
+    
+
+
+
+  #get-more{
+    display: hidden;
+}
+
 #gallery-button{
     display: inline-block;
     background: #333;

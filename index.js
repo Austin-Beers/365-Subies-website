@@ -57,6 +57,8 @@ function renderAAPage() {
     });
 }
 
+ let partsQuery =  "";      
+
 function renderPartsPage() {
     renderBackButton()
     console.log("clicked parts");
@@ -67,10 +69,12 @@ function renderPartsPage() {
         
         event.preventDefault();
         const partsTarget = $(event.currentTarget).find("#parts-search-input");
-        const partsQuery = partsTarget.val();
+         partsQuery() = partsTarget.val();
         partsTarget.val("");
         getDataFromWalmart(partsQuery, displayWalmartData);
     });
+// $("#get-more-button").click(getDataFromWalmart(partsQuery, appendWalmartData))
+
 }
 
 function getDataFromWalmart(searchTerm, callback) {
@@ -80,7 +84,8 @@ function getDataFromWalmart(searchTerm, callback) {
       data: {
         apiKey: 'f4arv7xx2b3a7n6tpvezn945',
         query: searchTerm,
-      },
+        //start: 
+    },
       dataType: 'jsonp',
       type: 'GET',
       success: callback
@@ -107,7 +112,16 @@ function displayWalmartData(data){
     $("#totalNum0").html(totalResultsFnd);
     const searchResults = data.items.map((item, index) => renderWalmartResult(item));
     $("#parts-result").html(searchResults);
+    // $("#get-more-button").click(getDataFromWalmart())
+    // if(totalReslutsFnd > 10){
+    //     $("#get-more-button").show()
+    // }
 }         
+
+function appendWalmartData(){
+    const searchResults = data.items.map((item, index) => renderWalmartResult(item));
+    $("#parts-result").append(searchResults)
+}
 
 function getDataFromEtsy(searchTerm, callback) {
     etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords="+
