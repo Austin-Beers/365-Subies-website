@@ -5,7 +5,7 @@ let headerState = {
 }
 
 function renderBackButton(){
-    const backButton = `<button id="back-button">back</button>`
+    const backButton = `<button id="back-button">Previous Page</button>`
     $("#back-page").html(backButton)
     $("#back-button").click(returnToStartPage)
     $("#back-page").show()
@@ -44,8 +44,8 @@ function renderGalleryPage() {
 function renderAAPage() {
     renderBackButton()
     console.log("beanbag");
-    $("#aa-page").show();
     $("#start-page").hide();
+    $("#aa-page").show();
     headerState.pageStage = "AA";
     $("#aa-search-form").submit(event => {
         event.preventDefault();
@@ -57,19 +57,20 @@ function renderAAPage() {
     });
 }
 
- let partsQuery =  "";      
+ //let partsQuery =  "";      
 
 function renderPartsPage() {
     renderBackButton()
     console.log("clicked parts");
-    $("#parts-page").show();
     $("#start-page").hide();
+    $("#parts-page").show();
     headerState.pageStage = "parts";
     $("#parts-search-form").submit(event => {
         
         event.preventDefault();
         const partsTarget = $(event.currentTarget).find("#parts-search-input");
-         partsQuery() = partsTarget.val();
+       // partsQuery() = partsTarget.val();
+        const partsQuery = partsTarget.val();
         partsTarget.val("");
         getDataFromWalmart(partsQuery, displayWalmartData);
     });

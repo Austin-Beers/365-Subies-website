@@ -57,6 +57,16 @@ img {
     padding-top: 150px;
 }
 
+
+#back-button{
+    width: 100%;
+    height: 25px;
+    background:  #333;
+    border: #333;
+    color: #fff;
+    font-size: 13px;
+}
+
 #button-nav {
     padding: 2em 1em 1em;
 }
@@ -93,19 +103,111 @@ img {
         text-align: center;
 }
     
+#parts-search-button {
+        display: inline-block;
+        background: #333;
+        color: #fff;
+        text-decoration: none;        
+        padding: 1em 2em;
+        border: 1px solid #666;
+         margin: 0.5em 0;
+}
+
+#parts-search-input {
+display: inline-block;
+background: #fff;
+color: #333;
+padding: 1em 2em;
+border: 1px solid #666;
+margin: 0.5em 0;
+}
+
 #parts-form .bg-image2 {
         position: absolute;
         background: #333
-         url("./img/pexels-photo-13918_1_.jpg");
+         url("./img/IMG_1786 (2).JPG");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
         height: 450px;
         z-index: -1;
-        opacity: 0.6;
+        opacity: 0.35;
       }
     
+#totalNum0{
+    padding-top: 100px;
+}
+
+#parts-form h1 {
+    padding-top: 50px;
+    padding-bottom: 0;
+    font-size: 30px;
+}
+#parts-form .content-wrap {
+    padding: 0 1.5em;
+}
+  
+#parts-form p{
+    padding-top: 135px;
+    font-size: 15px;
+}
+
+#aa-form{
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#aa-search-button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;        
+    padding: 1em 2em;
+    border: 1px solid #666;
+     margin: 0.5em 0;
+}
+
+#aa-search-input {
+display: inline-block;
+background: #fff;
+color: #333;
+padding: 1em 2em;
+border: 1px solid #666;
+margin: 0.5em 0;
+}
+
+#aa-form .bg-image3 {
+    position: absolute;
+    background: #333
+     url("./img/IMG_1786 (2).JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.35;
+  }
+
+#totalNum1{
+padding-top: 100px;
+}
+
+#aa-form h1 {
+padding-top: 50px;
+padding-bottom: 0;
+font-size: 30px;
+}
+#aa-form .content-wrap {
+padding: 0 1.5em;
+}
+
+#aa-form p{
+padding-top: 135px;
+font-size: 15px;
+}
 
 
 
