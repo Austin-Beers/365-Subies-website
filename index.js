@@ -57,7 +57,7 @@ function renderAAPage() {
     });
 }
 
- //let partsQuery =  "";      
+ let partsQuery =  "";      
 
 function renderPartsPage() {
     renderBackButton()
@@ -69,12 +69,13 @@ function renderPartsPage() {
         
         event.preventDefault();
         const partsTarget = $(event.currentTarget).find("#parts-search-input");
-       // partsQuery() = partsTarget.val();
-        const partsQuery = partsTarget.val();
+       partsQuery() = partsTarget.val();
+        //const partsQuery = partsTarget.val();
         partsTarget.val("");
         getDataFromWalmart(partsQuery, displayWalmartData);
+    //pass in search term instead of const value inorder for pagination
     });
-// $("#get-more-button").click(getDataFromWalmart(partsQuery, appendWalmartData))
+ $("#get-more-button").click(getDataFromWalmart(partsQuery, appendWalmartData))
 
 }
 
