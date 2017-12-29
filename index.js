@@ -58,8 +58,18 @@ function renderAAPage() {
 }
 
  let partsQuery =  "";      
+ let partsIndex =  1;
 
-function renderPartsPage() {
+ function addToPartsIndex(addedNumber){
+     partsIndex += addedNumber;
+    
+    }
+
+ function setPartsQuery(setQuery){
+    partsQuery = setQuery;
+}
+
+ function renderPartsPage() {
     renderBackButton()
     console.log("clicked parts");
     $("#start-page").hide();
@@ -69,42 +79,46 @@ function renderPartsPage() {
         
         event.preventDefault();
         const partsTarget = $(event.currentTarget).find("#parts-search-input");
-       partsQuery() = partsTarget.val();
-        //const partsQuery = partsTarget.val();
+       setPartsQuery(partsTarget.val());
+       //const partsQuery = partsTarget.val();
         partsTarget.val("");
-        getDataFromWalmart(partsQuery, displayWalmartData);
+        getDataFromWalmart(partsQuery, displayWalmartData, partsIndex);
     //pass in search term instead of const value inorder for pagination
     });
- $("#get-more-button").click(getDataFromWalmart(partsQuery, appendWalmartData))
+ $("#get-more-button").click(event =>{
+    event.preventDefault();
+    console.log(partsQuery,partsIndex);
+    getDataFromWalmart(partsQuery, appendWalmartData, partsIndex)
+ 
+})
 
 }
-
-function getDataFromWalmart(searchTerm, callback) {
+// partsQuery becomes searchTerm & appendWalmartData becomes callback
+function getDataFromWalmart(searchTerm, callback, partsIndex) {
     console.log(searchTerm)
     const settings = {
       url: WALMART_SEARCH_URL,
       data: {
         apiKey: 'f4arv7xx2b3a7n6tpvezn945',
         query: searchTerm,
-        //start: 
+        start: partsIndex,
     },
       dataType: 'jsonp',
       type: 'GET',
-      success: callback
+      success: callback   
     };
   $.ajax(settings);
   }
 
  function renderWalmartResult(result){
-    console.log(result, "result");
-    console.log(result.name, result.salePrice, result.thumbnailImage);
+    
     return `
-    <div>
+    <div class="parts-container">
         <h2>
-            <a id="parts-search-title" href="${result.productUrl}" target="_blank">${result.name}</a>
-            <a id="parts-search-price" href="${result.productUrl}" target="_blank">${result.salePrice}</a>
+            <a class="parts-search-title" href="${result.productUrl}" target="_blank">${result.name}</a>
+            <a class="parts-search-price" href="${result.productUrl}" target="_blank">${result.salePrice}</a>
         </h2>
-        <a id="parts-search-image" href="${result.productUrl}" target="_blank"><img src="${result.thumbnailImage}</a>"
+        <a class="parts-search-image" href="${result.productUrl}" target="_blank"><img src="${result.thumbnailImage}</a>"
     </div>
 `
 }
@@ -114,15 +128,19 @@ function displayWalmartData(data){
     $("#totalNum0").html(totalResultsFnd);
     const searchResults = data.items.map((item, index) => renderWalmartResult(item));
     $("#parts-result").html(searchResults);
+    
+    addToPartsIndex(data.items.length) 
+    
     // $("#get-more-button").click(getDataFromWalmart())
     // if(totalReslutsFnd > 10){
     //     $("#get-more-button").show()
     // }
 }         
 
-function appendWalmartData(){
+function appendWalmartData(data){
     const searchResults = data.items.map((item, index) => renderWalmartResult(item));
-    $("#parts-result").append(searchResults)
+    $("#parts-result").append(searchResults);
+    addToPartsIndex(data.items.length) 
 }
 
 function getDataFromEtsy(searchTerm, callback) {
@@ -141,13 +159,15 @@ function getDataFromEtsy(searchTerm, callback) {
     console.log(result, "result");
     console.log(result.title, result.price, result.Images[0].url_75x75);
      return `
-     <div>
-         <h2>
-             <a id="aa-search-title" href="${result.url}" target="_blank">${result.title}</a>
-             <a id="aa-search-price" href="${result.url}" target="_blank">${result.price}</a>
+     
+    <div class="aa-container">
+        <h2>
+             <a class="aa-search-title" href="${result.url}" target="_blank">${result.title}</a>
+             <a class="aa-search-price" href="${result.url}" target="_blank">${result.price}</a>
          </h2>
-         <a id="aa-search-image" href="${result.url}" target="_blank"><img src="${result.Images[0].url_75x75}"></img></a>"
+         <a class="aa-search-image" href="${result.url}" target="_blank"><img src="${result.Images[0].url_75x75}"></img></a>"
      </div>
+     
  `
   }
   

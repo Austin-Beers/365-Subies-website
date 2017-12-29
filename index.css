@@ -260,7 +260,8 @@ font-size: 15px;
 }
   
 .card-content {
-    padding: 1.5em;
+    padding:10px;
+    padding-top: 5px;
 }
 
 
@@ -284,6 +285,38 @@ font-size: 15px;
     display: none;
 }
 
+.parts-container{
+    margin: 10px;
+    padding: 20px;
+    
+    max-width: 499px;
+    
+    border: 3px solid #333;
+    background-color: #fff;
+}
+
+.parts-search-title, .parts-search-price{
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.aa-container{
+    margin: 10px;
+    padding: 20px;
+    
+    max-width: 499px;
+    
+    border: 3px solid #333;
+    background-color: #fff;
+}
+
+.aa-search-title, .aa-search-price{
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+}
 /* media queries and flex-box/
     
     /*grid-area declarition*/
@@ -319,6 +352,23 @@ font-size: 15px;
     /*media query for 500px to 768px screen*/
         @media only screen and (min-width: 500px){
 
+         /* styling for start page */
+           h3{
+               display: none;
+           }
+         
+            #parts-button{
+                cursor: pointer;
+            }
+            
+            #gallery-button{
+                cursor: pointer;
+            }
+            
+            #AA-button{
+                cursor: pointer;
+            }
+           
             #start-form .bg-image {
                 
                 display: none;
@@ -336,16 +386,35 @@ font-size: 15px;
             
             .grid li{
                 background: #333;
-                margin: 0 10px;
+                margin: 20px 10px;
+            }
+            
+            .card1, .card2{
+                width: 100%;
+               min-height: 150px;
             }
             
             .card1:hover{
                 background-image: url("./img/IMG_4083.JPG");
+                background-size: 100% 100%;
                 width: 100%;
-
+                color:#fff;
             }
-
-            .grid button {
+            
+            .card2:hover{
+                background-image: url("./img/FullSizeRender (1).jpg");
+                background-size: 100% 100%;
+                color:#fff;
+                width: 100%;
+            }
+            
+            .card3:hover{
+                background-image: url("./img/pexels-photo-13918_1_.jpg");
+                background-size: 100% 100%;
+                color:#fff;
+            
+            }
+                .grid button {
                 align-items:center;
                 flex:1;
                 display:flex;
@@ -355,20 +424,20 @@ font-size: 15px;
             img {
                 max-width:100%;
              }
-            
-            .wrapper {
+             
+             .wrapper {
                 
-                margin: 0 auto;
-                padding:50px;
+                margin: 0;
+                padding: 10px;
              }
+            
               
             #button-nav a{
                 display: none;
              }
             
             #button-nav{
-                padding-top: 0px;
-                
+               padding: 0px;
              }
 
             #button-nav ul{
@@ -390,58 +459,81 @@ font-size: 15px;
             .card-content h3{
                 padding: 10px;
             }
-            /* .wrapper-start{
-            display: grid;
-            grid-gap: 10px;
-                grid-template-columns: 150px 150px 150px 150px;
-                grid-template-rows: 200px 200px 200px; 
-                grid-template-areas:
-                    "card-start card-start image1 card1"
-                    "card-start card-start image2 card2"
-                    "card-start card-start image3 card3";
-            } */
+        
+
+        /* styling for parts page */
+
+        #back-page{
+            margin-top: 0px
+        }
+        
+        /* styling for aa page & parts page */
+        
+    
+        #aa-result, #parts-result{
+            display: flex;
+           flex-wrap: wrap;
+            
+        }
+        
+        .aa-container, .parts-container{
+            margin: 10px;
+            padding: 20px;
+            
+            max-width: 245px;
+            min-width: 150px;
+            border: 3px solid #333;
+            background-color: #fff;
+            flex: 1;
+        }
+       
+        .aa-search-title, .aa-search-price, .parts-search-title, .parts-search-price{
+            font-size: 15px;
+            color: #333;
+            text-decoration: none;
+        }
+    
 }
+        /*media query for 769px plus  screen*/
+        @media only screen and (min-width: 769px){
+           
+           /* styling for start page */
+            #start-page{
+               display: flex;
+               flex-direction: row;
+               height: 100vh;
+           }
+           
+            .card-start{
+                min-height:490px;
+            }
 
+            .box{
+                min-width: 175px;
+                min-height:150px;
+            }
+            
+            .grid ul{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 2;
 
-
-
-
-
-
-
-
-
-    /* @supports (display: grid) {
-@media screen and (min-width: 1200px) {
-
-    .start-page {
-    display: grid;
-    grid-template-columns: 3fr 10px 1fr;
-    grid-template-rows: 1fr 10px 1fr 10px 1fr;
-    grid-template-areas: 
-    "title . parts"
-    "title . ."
-    "title . gallery"
-    "title . ."
-    "title . aa";
-}
-
-.parts-button{
-    grid-area: parts;
-}
-
-.aa-button{
-    grid-area: aa;
-}
-
-.gallery-buttton{
-    grid-area: gallery;
-}
-
-.title{
-    grid-area: title;
-}
-
-    }
-} */
-
+            }
+        
+            .card-start{
+                flex-grow: 2;
+            }
+            
+            .card1, .card2, .card3{
+                flex-grow: 1;
+            }
+            #parts-button{
+                margin: auto;
+                width: 50%;
+            }
+            
+           
+                
+            }
+        
+        
