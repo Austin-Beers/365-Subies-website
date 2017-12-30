@@ -41,6 +41,19 @@ function renderGalleryPage() {
     headerState.pageStage = "gallery";
 }
 
+
+let aaQuery =  "";      
+let aaIndex =  1;
+
+function addToAAIndex(addedNumber){
+    aaIndex += addedNumber;
+   
+}
+
+function setAAQuery(setQuery){
+   aaQuery = setQuery;
+}
+
 function renderAAPage() {
     renderBackButton()
     console.log("beanbag");
@@ -50,11 +63,16 @@ function renderAAPage() {
     $("#aa-search-form").submit(event => {
         event.preventDefault();
         const aaTarget = $(event.currentTarget).find("#aa-search-input");
-        const aaQuery = aaTarget.val();
-        console.log(aaQuery);
+        setAAQuery(aaTarget.val());
         aaTarget.val("");
-        getDataFromEtsy(aaQuery, displayEtsyData);
+        getDataFromEtsy(aaQuery, displayEtsyData, aaIndex);
+     //pass in search term instead of const value inorder for pagination
     });
+     $("#get-more-aa").click(event =>{
+            event.preventDefault();
+            console.log(aaQuery,aaIndex);
+            getDataFromEtsy(aaQuery, appendEtsyData, aaIndex);
+});
 }
 
  let partsQuery =  "";      
@@ -76,21 +94,18 @@ function renderAAPage() {
     $("#parts-page").show();
     headerState.pageStage = "parts";
     $("#parts-search-form").submit(event => {
-        
         event.preventDefault();
         const partsTarget = $(event.currentTarget).find("#parts-search-input");
-       setPartsQuery(partsTarget.val());
-       //const partsQuery = partsTarget.val();
+        setPartsQuery(partsTarget.val());
         partsTarget.val("");
         getDataFromWalmart(partsQuery, displayWalmartData, partsIndex);
     //pass in search term instead of const value inorder for pagination
     });
- $("#get-more-button").click(event =>{
+ $("#get-more-parts").click(event =>{
     event.preventDefault();
     console.log(partsQuery,partsIndex);
     getDataFromWalmart(partsQuery, appendWalmartData, partsIndex)
- 
-})
+ });
 
 }
 // partsQuery becomes searchTerm & appendWalmartData becomes callback
@@ -124,6 +139,7 @@ function getDataFromWalmart(searchTerm, callback, partsIndex) {
 }
 
 function displayWalmartData(data){
+    console.log(data, "data");
     let totalResultsFnd = `<h5> Your search returned <span id='resultNum'>${data.totalResults}</span> result(s).</h5>`;
     $("#totalNum0").html(totalResultsFnd);
     const searchResults = data.items.map((item, index) => renderWalmartResult(item));
@@ -144,20 +160,22 @@ function appendWalmartData(data){
 }
 
 function getDataFromEtsy(searchTerm, callback) {
-    etsyURL = "https://openapi.etsy.com/v2/listings/active.js?keywords="+
+    console.log(aaIndex);
+    etsyURL = "https://openapi.etsy.com/v2/listings/active.js?offset="+aaIndex+"&keywords="+
     searchTerm+"&limit=12&includes=Images:1&api_key=6rj4kf3v2ylxpwdsr1xqxgor";
     const settings = {
         url: etsyURL ,
         dataType: 'jsonp',
         type: 'GET',
         success: callback 
+        
     };
    $.ajax(settings);
   }
 
   function renderEtsyResult(result){
-    console.log(result, "result");
-    console.log(result.title, result.price, result.Images[0].url_75x75);
+    // console.log(result, "result");
+    // console.log(result.title, result.price, result.Images[0].url_75x75);
      return `
      
     <div class="aa-container">
@@ -177,5 +195,16 @@ function getDataFromEtsy(searchTerm, callback) {
     const searchResults = data.results.map((item, index) => renderEtsyResult(item));
     $("#totalNum1").html(totalResultsFnd);
     $("#aa-result").html(searchResults);
+   console.log(aaIndex);
+    addToAAIndex(data.results.length);
+
 }
+
+function appendEtsyData(data){
+    const searchResults = data.results.map((item, index) => renderEtsyResult(item));
+    $("#aa-result").append(searchResults);
+    addToAAIndex(data.results.length);
+}
+
+
 renderStartPage();
