@@ -1,110 +1,129 @@
 <!DOCTYPE html>
-<html>
-    <head>
-       <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width">
-       <title>365 Subies</title>
-       <link href="index.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-       <main>
-        <div class="wrapper">
-        <section  id="start-page">
-            <section class="card-start" id="start-form">
-                <section id="card-content"></section>
-                <div class="bg-image"></div>
-                <div class="content-wrap">
-                  <h1>365 Subies</h1>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
-            
-             </section>
-            <section id="button-nav" class="grid">
-                <ul>
-                    <li>
-                      <div class="box card1">
-                       <a class="img-card1"><img src="./img/IMG_4083.JPG" alt=""></a>
-                        <div class="card-content" id="content-container1">
-                            <h3 class="card-title">Subaru Parts Search Feature</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-                          <div id="parts-button-id"><div/>
-                        </div>
-                      </div> 
-                    </li>
-                    <li>
-                        <div class="box card2">
-                          <a class="img-card2"><img src="./img/FullSizeRender (1).jpg" alt=""></a>
-                          <div class="card-content" id="content-container2">
-                              <h3 class="card-title">Subaru Gallery</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-                              <div id="gallery-button-id"></div>
-                          </div>
-                        </div> 
-                      </li>
-                      <li>
-                        <div class="box card3">
-                          <a class="img-card3"><img src="./img/pexels-photo-13918_1_.jpg" alt=""></a>
-                          <div class="card-content" id="content-container3">
-                              <h3 class="card-title">Subaru Apparel and Accesories</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
-                              <div id="aa-button-id"></div>
-                          </div>
-                        </div> 
-                      </li>
-      </section>
-    </div>
-      </section>
-            <section id="back-page"></section>
-         
-            <section id="parts-page">
-            <div id="parts-form">
-              <div class="bg-image2"></div>
-              <div class="content-wrap">
-                
-                <h1>Check out our parts Data base!</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
-                    <form action="#" id="parts-search-form">
-                      <input type="text" id="parts-search-input">
-                      <button type="submit" id="parts-search-button">Search</button>
-              </form>
-              </div>
-            
-             <div id="totalNum0" aria-live="assertive"></div>
-             <div id="parts-result" aria-live="assertive"></div>
-             <div id="get-more">
-               <button id="get-more-parts"></button>
-             </div>
+  <html lang="en">
+  
+  <head role="banner">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>365 Subies</title>
+      <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+      <main role="main">
+          <section class="wrapper" role="container">
+              <section id="start-page" role="contentinfo">
+                  <section class="card-start" id="start-form">
+                      <section id="card-content"></section>
+                      <div class="bg-image"></div>
+                      <h1>365 Subies</h1>
+                      <article class="start-para"aria-live="polite">
+                          <p>Our club application allow users to search for Subaru parts, accesories, and apparel through the Walmart and Etsy Application Program Interface </p>
+                      </article>
+                      <aside class="box-info" aria-live="assertive" hidden>
+                          <p>
+                              Click the top right button to Search thousands of aftermarket Subaru parts with our parts search feature
+                          </p>
+                          <p>
+                              Click the middle button to check out our member gallery in the Gallery section
+                          </p>
+                          <p>
+                              Click the bottom right button to search tons of subaru apparel and accesories with our search feature above
+                          </p>
+                      </aside>
+                  </section>
+                  <nav id="button-nav" class="grid" role="navigation">
+                      <ul>
+                          <li>
+                              <article class="box card1">
+                                  <a class="img-card1"><img src="./img/IMG_4083.JPG" alt="ground veiw subaru image"></a>
+                                  <legend class="card-content" id="content-container1">
+                                      <h3 class="card-title">Subaru Parts Search Feature</h3>
+                                      <p>Check out Subaru parts by clicking the search button below</p>
+                                      <div id="parts-button-id" aria-live="assertive"><div/>
+                                      </legend>
+                                    </article>
+                          </li>
+                          <li>
+                              <article class="box card2">
+                                  <a class="img-card2"><img src="./img/FullSizeRender (1).jpg" alt="frontal veiw subaru image"></a>
+                                  <legend class="card-content" id="content-container2">
+                                      <h3 class="card-title">Subaru Gallery</h3>
+                                      <p>Check out our 365 Subies members gallery by clicking the button below </p>
+                                      <div id="gallery-button-id" aria-live="assertive"></div>
+                                  </legend>
+                              </article>
+                          </li>
+                          <li>
+                              <article class="box card3">
+                                  <a class="img-card3"><img src="./img/pexels-photo-13918_1_.jpg" alt="subaru love image"></a>
+                                  <legend class="card-content" id="content-container3">
+                                      <h3 class="card-title">Subaru Apparel and Accesories</h3>
+                                      <p>Check out Subaru accesories and apparel by clicking the search button below</p>
+                                      <div id="aa-button-id" aria-live="assertive"></div>
+                                  </legend>
+                                </article>
+                          </li>
+                        </nav>
+                  <section class="button-nav-info"  role="contentinfo" hidden>
+                      <article class="parts-info" aria-live="assertive">
+                          <p>Search thousands of aftermarket Subaru parts with our parts search feature! Click the Search Parts button above to check it out.</p>
+                      </article>
+                      <article class="gallery-info" aria-live="assertive">
+                          <p>Check out our member gallery in the Gallery section above.</p>
+                      </article>
+                      <article class="aa-info" aria-live="assertive">
+                          <p>Search tons of subaru apparel and accesories with our search feature by clicking the search button on the right above.</p>
+                      </article>
+                    </section>
+              </section>
+              
+              <section id="back-page"></section>
+  
+              <section id="parts-page" role="contentinfo">
+                  <article id="parts-wrapper">
+                      <header class="bg-image2"></header>
+                      <nav class="form-info-wrap" aria-live="assertive">
+                          <h1>Check out our parts Data base!</h1>
+                          <p>This data base pulls together related subaru parts by searching through the Walmart API with a subaru based search-term below. Each resulting item will display the title, the price and a thumbnail image. Each item is clickable and will bring you to the corresponding API host website. </p>
+                          <form action="#" id="parts-search-form" role="search">
+                              <input type="text" id="parts-search-input" aria-live="assertive">
+                              <button type="submit" id="parts-search-button">Search</button>
+                          </form>
+                      </nav>
+                       <div id="totalNum0" aria-live="assertive"></div>
+                      <div id="parts-result" aria-live="assertive"></div>
+  
+                      <button id="get-more-parts" hidden>load more</button>
+                    </article>
+              </section>
+  
+              <section id="gallery-page">
+                  <div id="gallery-div"></div>
+              </section>
+  
+              <section id="aa-page" role="contentinfo">
+                  <article class="aa-wrapper">
+                      <header class="bg-image3"></header>
+                      <nav class="form-info-wrap" aria-live="assertive">
+                          <h1>Check out our accesories and apparel Data base!</h1>
+                          <p>This data base constructs a complation of items drawn from the Etsy API, search any key subaru word below to find related items. Each resulting item will display the title, the price and a thumbnail image. Each item is clickable and will bring you to the corresponding API host website.</p>
+                          <form action="#" id="aa-search-form" role="search">
+                              <input type="text" id="aa-search-input">
+                              <button type="submit" id="aa-search-button">Search</button>
+                          </form>
+                        </nav>
+                      <div id="totalNum1" aria-live="assertive"></div>
+                      <div id="aa-result" aria-live="assertive"></div>
+  
+                      <button id="get-more-aa" aria-live="assertive" hidden>load more</button>
+  
+                  </article>
+                </section>
           </section>
-         
-          <section id="gallery-page">
-              <div id="gallery-div"></div>
-          </section>
-          
-          <section id="aa-page">
-             <div class="aa-form">
-              <div class="bg-image3"></div>
-              <div class="content-wrap">
-                <h1>Check out our parts Data base!</h1>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
-            <form action="#" id="aa-search-form">
-                <input type="text" id="aa-search-input">
-                <button type="submit" id="aa-search-button">Search</button>
-           </form>
-           </div>
-              <div id="totalNum1" aria-live="assertive"></div>
-              <div id="aa-result" aria-live="assertive"></div>
-              <div id="get-more">
-                <button id="get-more-aa"></button>
-              </div>
-           
-            </div>
-          </section>
-       
-        </main>
-       <script
-       src="https://code.jquery.com/jquery-3.2.1.min.js"
-       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-       crossorigin="anonymous"></script>
-       <script src="index.js"></script>
-    </body>
- </html>
- 
+  
+      </main>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+  </body>
+  
+  </html>

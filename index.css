@@ -1,539 +1,460 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #333;
-    color: #fff;
-    font-size: 1.1em;
-    line-height: 1.5;
-    text-align: center;
-}
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 1em 0;
-}
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-  p {
-    margin: 0;
-    padding: 1em 0;
-}
-
-#start-form{
-    min-height: 450px;
-    color: #fff;
-    text-align: center;
-}
-
-#start-form .bg-image {
-    position: absolute;
-    background: #333
-      url("./img/DSC_0076.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.6;
-  }
-#start-form h1 {
-    padding-top: 50px;
-    padding-bottom: 0;
-    font-size: 40px;
-}
-
-#start-form .content-wrap {
-    padding: 0 1.5em;
-}
-  
-#start-form p{
-    padding-top: 150px;
-}
-
-
-#back-button{
-    width: 100%;
-    height: 25px;
-    background:  #333;
-    border: #333;
-    color: #fff;
-    font-size: 13px;
-}
-
-#button-nav {
-    padding: 2em 1em 1em;
-}
-  
-#button-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-  
-#button-nav li {
-    margin-bottom: 1em;
-    background: #fff;
-    color: #333;
-}
-  
-#parts-button{
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;        
-    padding: 1em 2em;
-    border: 1px solid #666;
-     margin: 0.5em 0;
-}
-#parts-button:hover {
-    background: #eaeaea;
-    color: #333;
-  }
-
-#parts-form{
-        min-height: 450px;
-        color: #fff;
-        text-align: center;
-}
-    
-#parts-search-button {
-        display: inline-block;
-        background: #333;
-        color: #fff;
-        text-decoration: none;        
-        padding: 1em 2em;
-        border: 1px solid #666;
-         margin: 0.5em 0;
-}
-
-#parts-search-input {
-display: inline-block;
-background: #fff;
-color: #333;
-padding: 1em 2em;
-border: 1px solid #666;
-margin: 0.5em 0;
-}
-
-#parts-form .bg-image2 {
-        position: absolute;
-        background: #333
-         url("./img/IMG_1786 (2).JPG");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 450px;
-        z-index: -1;
-        opacity: 0.35;
-      }
-    
-#totalNum0{
-    padding-top: 100px;
-}
-
-#parts-form h1 {
-    padding-top: 50px;
-    padding-bottom: 0;
-    font-size: 30px;
-}
-#parts-form .content-wrap {
-    padding: 0 1.5em;
-}
-  
-#parts-form p{
-    padding-top: 135px;
-    font-size: 15px;
-}
-
-#aa-form{
-    min-height: 450px;
-    color: #fff;
-    text-align: center;
-}
-
-#aa-search-button {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;        
-    padding: 1em 2em;
-    border: 1px solid #666;
-     margin: 0.5em 0;
-}
-
-#aa-search-input {
-display: inline-block;
-background: #fff;
-color: #333;
-padding: 1em 2em;
-border: 1px solid #666;
-margin: 0.5em 0;
-}
-
-#aa-form .bg-image3 {
-    position: absolute;
-    background: #333
-     url("./img/IMG_1786 (2).JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.35;
-  }
-
-#totalNum1{
-padding-top: 100px;
-}
-
-#aa-form h1 {
-padding-top: 50px;
-padding-bottom: 0;
-font-size: 30px;
-}
-#aa-form .content-wrap {
-padding: 0 1.5em;
-}
-
-#aa-form p{
-padding-top: 135px;
-font-size: 15px;
-}
-
-
-
-  #get-more{
-    display: hidden;
-}
-
-#gallery-button{
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;        
-    padding: 1em 2em;
-    border: 1px solid #666;
-     margin: 0.5em 0;
-}
-#gallery-button:hover {
-    background: #eaeaea;
-    color: #333;
-  }
-
-#gallery-button{
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;        
-    padding: 1em 2em;
-    border: 1px solid #666;
-     margin: 0.5em 0;
-}
-#gallery-button:hover {
-    background: #eaeaea;
-    color: #333;
-  }
-  
-#AA-button{
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;        
-    padding: 1em 2em;
-    border: 1px solid #666;
-     margin: 0.5em 0;
-}
-
-#AA-button:hover {
-    background: #eaeaea;
-    color: #333;
-}
-  
-.card-content {
-    padding:10px;
-    padding-top: 5px;
-}
-
-
-  title{
-    display: none;
-}
-
-#parts-page{
-    display: none;
-}
-
-#aa-page{
-    display: none;
-}
-
-#gallery-page{
-    display: none;
-}
-
-#back-page{
-    display: none;
-}
-
-.parts-container{
-    margin: 10px;
-    padding: 20px;
-    
-    max-width: 499px;
-    
-    border: 3px solid #333;
-    background-color: #fff;
-}
-
-.parts-search-title, .parts-search-price{
-    font-size: 15px;
-    color: #333;
-    text-decoration: none;
-}
-
-
-.aa-container{
-    margin: 10px;
-    padding: 20px;
-    
-    max-width: 499px;
-    
-    border: 3px solid #333;
-    background-color: #fff;
-}
-
-.aa-search-title, .aa-search-price{
-    font-size: 15px;
-    color: #333;
-    text-decoration: none;
-}
-/* media queries and flex-box/
-    
-    /*grid-area declarition*/
-        /* .card-start{
-            grid-area: card-start;
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #333;
+            color: #fff;
+            font-size: 1.1em;
+            line-height: 1.5;
+            text-align: center;
         }
-    
-        #content-container1{
-            grid-area: card1;
+        button {
+            cursor: pointer;
         }
-    
-        #content-container2{
-            grid-area: card2;
+        h1, h2, h3 {
+            margin: 0;
+            padding: 1em 0;
+       }
+        h5 {
+            padding-top: 20px;
+       }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+       }
+        p {
+            margin: 0;
+            padding: 1em;
+       }
+        #start-form {
+            min-height: 450px;
+            color: #fff;
+            text-align: center;
+       }
+        #start-form .bg-image {
+            position: absolute;
+            background: #333 url("./img/DSC_0076.JPG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            z-index: -1;
+            opacity: 0.5;
+       }
+        #start-form h1 {
+            padding-top: 50px;
+            padding-bottom: 0;
+            font-size: 40px;
+       }
+        #start-form .form-info-wrap {
+            padding: 0 1.5em;
+       }
+        #start-form p {
+            padding-top: 150px;
+       }
+        #back-button {
+            width: 100%;
+            height: 25px;
+            background: #333;
+            border: #333;
+            color: #fff;
+            font-size: 13px;
+       }
+        #button-nav {
+            padding: 2em 1em 1em;
+       }
+        #button-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+       }
+        #button-nav li {
+            margin-bottom: 1em;
+            background: #fff;
+            color: #333;
+       }
+        #parts-button{
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #parts-button:hover {
+            background: #eaeaea;
+            color: #333;
+       }
+        #parts-wrapper {
+            min-height: 450px;
+            color: #fff;
+            text-align: center;
+       }
+        #parts-search-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #parts-search-input {
+            display: inline-block;
+            background: #fff;
+            color: #333;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #parts-wrapper .bg-image2 {
+            position: absolute;
+            background: #333 url("./img/IMG_1786 (2).JPG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            z-index: -1;
+            opacity: 0.35;
+       }
+        #totalNum0 {
+            padding-top: 150px;
+       }
+        
+        #parts-wrapper .form-info-wrap {
+            padding: 0 1.5em;
+       }
+        #get-more-parts {
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            padding: 1em 2em;
+            margin: 0.5em 0;
+       }
+        #aa-wrapper {
+            min-height: 450px;
+            color: #fff;
+            text-align: center;
+       }
+        #aa-search-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #aa-search-input {
+            display: inline-block;
+            background: #fff;
+            color: #333;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        .aa-wrapper .bg-image3 {
+            position: absolute;
+            background: #333 url("./img/IMG_1786 (2).JPG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            z-index: -1;
+            opacity: 0.35;
+       }
+        #totalNum1 {
+            padding-top: 200px;
+       }
+        .form-info-wrap h1 {
+            padding-top: 50px;
+            padding-bottom: 0;
+            font-size: 30px;
+       }
+        .form-info-wrap p{
+            font-size: 18px;
         }
-    
-        #content-container3{
-            grid-area: card3;
+       #aa-wrapper .form-info-wrap {
+            padding: 0 1.5em;
         }
         
-        .img-card1{
-            grid-area: image1;
-        }
-        
-        .img-card2{
-            grid-area: image2;
-        }
-
-        .img-card3{
-            grid-area: image3;
-        } */
-
-
-    /*media query for 500px to 768px screen*/
-        @media only screen and (min-width: 500px){
-
-         /* styling for start page */
-           h3{
-               display: none;
-           }
-         
-            #parts-button{
-                cursor: pointer;
-            }
-            
-            #gallery-button{
-                cursor: pointer;
-            }
-            
-            #AA-button{
-                cursor: pointer;
-            }
-           
-            #start-form .bg-image {
-                
+        #get-more-aa {
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            padding: 1em 2em;
+            margin: 0.5em 0;
+       }
+        #gallery-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #gallery-button:hover {
+            background: #eaeaea;
+            color: #333;
+       }
+        #gallery-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #gallery-button:hover {
+            background: #eaeaea;
+            color: #333;
+       }
+        #AA-button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            padding: 1em 2em;
+            border: 1px solid #666;
+            margin: 0.5em 0;
+       }
+        #AA-button:hover {
+            background: #eaeaea;
+            color: #333;
+       }
+        .card-content {
+            padding:10px;
+            padding-top: 5px;
+       }
+        title {
+            display: none;
+       }
+        #parts-page {
+            display: none;
+       }
+        #aa-page {
+            display: none;
+       }
+        #gallery-page {
+            display: none;
+       }
+        #back-page {
+            display: none;
+       }
+        .parts-container {
+            margin: 10px;
+            padding: 20px;
+            max-width: 499px;
+            border: 3px solid #333;
+            background-color: #fff;
+       }
+        .parts-search-title, .parts-search-price {
+            font-size: 15px;
+            color: #333;
+            text-decoration: none;
+       }
+        .aa-container {
+            margin: 10px;
+            padding: 20px;
+            max-width: 499px;
+            border: 3px solid #333;
+            background-color: #fff;
+       }
+        .aa-search-title, .aa-search-price {
+            font-size: 15px;
+            color: #333;
+            text-decoration: none;
+       }
+       /* media queries and flex-box */
+       /*media query for 500px to 768px screen*/
+        @media only screen and (min-width: 500px) {
+           /* styling for start page */
+            h3 {
                 display: none;
-                
-            }
-                
-           #start-form{
-               background-image: url("./img/DSC_0076.JPG");
-               background-size: 100% 100%;
-            }
-            
-           .grid ul{
+           }
+            #parts-button {
+                cursor: pointer;
+           }
+            #gallery-button {
+                cursor: pointer;
+           }
+            #AA-button {
+                cursor: pointer;
+           }
+            #start-form .bg-image {
+                display: none;
+           }
+            #start-form {
+                background-image: url("./img/DSC_0076.JPG");
+                background-size: 100% 100%;
+           }
+            .grid ul {
                 background: #333;
            }
-            
-            .grid li{
+            .grid li {
                 background: #333;
                 margin: 20px 10px;
-            }
-            
-            .card1, .card2{
+           }
+            .card1, .card2 {
                 width: 100%;
-               min-height: 150px;
-            }
-            
-            .card1:hover{
+                min-height: 150px;
+           }
+            .card1:hover {
                 background-image: url("./img/IMG_4083.JPG");
                 background-size: 100% 100%;
                 width: 100%;
                 color:#fff;
-            }
-            
-            .card2:hover{
+           }
+            .card2:hover {
                 background-image: url("./img/FullSizeRender (1).jpg");
                 background-size: 100% 100%;
                 color:#fff;
                 width: 100%;
-            }
-            
-            .card3:hover{
+           }
+            .card3:hover {
                 background-image: url("./img/pexels-photo-13918_1_.jpg");
                 background-size: 100% 100%;
                 color:#fff;
-            
-            }
-                .grid button {
+           }
+            .card1:hover + .parts-info {
+                display: block;
+           }
+            #start-form p {
+                padding-top: 10px;
+           }
+            .start-para p {
+                padding-top: 10px;
+                margin-top: 210px;
+                background-color: #fff;
+                color: #333;
+                padding:10px;
+           }
+            .grid button {
                 align-items:center;
                 flex:1;
                 display:flex;
                 padding:20px 5px;
-             }
-            
+           }
             img {
                 max-width:100%;
-             }
-             
-             .wrapper {
-                
+           }
+            .wrapper {
                 margin: 0;
-                padding: 10px;
-             }
-            
-              
-            #button-nav a{
+           }
+            #button-nav a {
                 display: none;
-             }
-            
-            #button-nav{
-               padding: 0px;
-             }
-
-            #button-nav ul{
+           }
+            #button-nav {
+                padding: 0px;
+           }
+            #button-nav ul {
                 list-style: none;
                 margin: 0;
                 padding: 0;
                 display:flex;
-             }
-
-            #button-nav li{
+           }
+            #button-nav li {
                 display:flex;
                 flex:2;
-             }
-            
+           }
             .card-content p {
                 display: none;
-             }
-
-            .card-content h3{
+           }
+            .card-content h3 {
                 padding: 10px;
-            }
-        
-
-        /* styling for parts page */
-
-        #back-page{
-            margin-top: 0px
-        }
-        
-        /* styling for aa page & parts page */
-        
-    
-        #aa-result, #parts-result{
-            display: flex;
-           flex-wrap: wrap;
-            
-        }
-        
-        .aa-container, .parts-container{
-            margin: 10px;
-            padding: 20px;
-            
-            max-width: 245px;
-            min-width: 150px;
-            border: 3px solid #333;
-            background-color: #fff;
-            flex: 1;
-        }
-       
-        .aa-search-title, .aa-search-price, .parts-search-title, .parts-search-price{
-            font-size: 15px;
-            color: #333;
-            text-decoration: none;
-        }
-    
-}
-        /*media query for 769px plus  screen*/
-        @media only screen and (min-width: 769px){
-           
-           /* styling for start page */
-            #start-page{
-               display: flex;
-               flex-direction: row;
-               height: 100vh;
+           }
+            .button-nav-info {
+                background-color: #fff;
+                color: #333;
+                display: block;
+                border: 3px solid #fff;
+           }
+            .gallery-info {
+                background-color: #333;
+                color: #fff;
            }
            
-            .card-start{
+            #back-page {
+                margin-top: 0px 
+           }
+           /* styling for aa page & parts page */
+            #aa-result, #parts-result {
+                display: flex;
+                flex-wrap: wrap;
+           }
+            .aa-container, .parts-container {
+                margin: 10px;
+                padding: 20px;
+                max-width: 245px;
+                min-width: 150px;
+                border: 3px solid #333;
+                background-color: #fff;
+                flex: 1;
+           }
+            .aa-search-title, .aa-search-price, .parts-search-title, .parts-search-price {
+                font-size: 15px;
+                color: #333;
+                text-decoration: none;
+           }
+       }
+       /*media query for 769px plus screen*/
+        @media only screen and (min-width: 769px) { 
+           /* styling for start page */
+            .button-nav-info {
+                display: none;
+           }
+            #start-page {
+                display: flex;
+                flex-direction: row;
+                height: 100vh;
+           }
+            .card-start {
                 min-height:490px;
-            }
-
-            .box{
+           }
+            .box {
                 min-width: 175px;
                 min-height:150px;
-            }
-            
-            .grid ul{
+           }
+            .grid ul {
                 display: flex;
                 flex-direction: column;
                 flex-grow: 2;
-
-            }
-        
-            .card-start{
+           }
+            .card-start {
                 flex-grow: 2;
-            }
-            
-            .card1, .card2, .card3{
+           }
+            .grid {
+                display: flex;
+                justify-content: space-around;
+           }
+            .card1, .card2, .card3 {
                 flex-grow: 1;
-            }
-            #parts-button{
+           }
+            #parts-button {
                 margin: auto;
                 width: 50%;
-            }
-            
-           
-                
-            }
-        
+           }
+            .start-para p {
+                padding-top: 10px;
+                margin: 340px 10px 10px 10px;
+                background-color: #fff;
+                color: #333;
+                padding:10px;
+           }
+            .box-info {
+                display: block;
+                background-color: #fff;
+                color: #333;
+                margin: 10px;
+                font-size: 15px;
+           }
+       }
         
