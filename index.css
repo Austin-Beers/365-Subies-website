@@ -16,7 +16,10 @@
             margin: 0;
             padding: 1em 0;
        }
-        h5 {
+        .down-arrow{
+            padding-top: 0;
+        }
+       h5 {
             padding-top: 20px;
        }
         img {
