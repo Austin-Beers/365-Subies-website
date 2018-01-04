@@ -1,2 +1,3 @@
 # 365-Subaru-website-mvp
-First version of Subaru website
+![](/img/bottom-results-view.png)
+![](./img/bottom-results-view.png)
