@@ -25,3 +25,4 @@ Walmart API - to access their online store for parts
 Etsy API - to access their online store for apparel and accessories 
 
 Flex-box - to make the app responsive 
+bean
