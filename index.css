@@ -35,7 +35,7 @@
             font-weight: bold;
         }
         #start-form {
-            min-height: 450px;
+            min-height: 550px;
             text-align: center;
             border-bottom: 4px solid black;
         }
@@ -51,7 +51,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
-            height: 450px;
+            height: 600px;
             z-index: -1;
             opacity: .8;
        }
@@ -62,9 +62,7 @@
         #start-form .form-info-wrap {
             padding: 0 1.5em;
        }
-        /* #start-form p {
-            padding-top: 150px;
-       } */
+        
         #back-button {
             width: 100%;
             height: 25px;
@@ -296,8 +294,8 @@
        .secondary-gallery {
            display: none;
        }
-       /* media queries and flex-box */
-       /*media query for 500px to 768px screen*/
+       /* media queries  */
+       /*media query for 600px to 768px screen*/
          @media only screen and (min-width: 600px) {
             body{
                 text-align: left;
@@ -333,11 +331,11 @@
             }
             .flex-image {
                 display: block;
-                flex: 2;
+                flex: 5;
                 border-bottom: 3px solid #EC6E01;
             }
             .start-info {
-                flex: 1;
+                flex: 3;
             }
             #parts-button {
                 cursor: pointer;
@@ -351,10 +349,7 @@
              #start-form .bg-image {
                 display: none;
            } 
-            /* #start-form {
-                background-image: url("./img/DSC_0076.JPG");
-                background-size: 100% 100%;
-           } */
+            
             .grid ul {
                 background: #fff;
            }
@@ -380,17 +375,13 @@
                border-right: 3px solid #333;
            }
             .start-info p {
-                text-align: justify;
-                line-height: 2.25em;
+                
                 padding-top: 10px;
                 background-color: #fff;
                 color: #333;
                 padding:10px;
            }
-            .start-info h1 {
-                text-align: middle;
-                line-height: 2.75em;
-           }
+            
             .grid button {
                 align-items:center;
                 flex:1;
@@ -401,11 +392,11 @@
                 display: block;
                 flex: 2;
                 background: #333 url("./img/IMG_1910.JPG");
-                background-position: left center;
+                
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 450px;
+                height: 100%;
                 z-index: -1;
                 opacity: 0.8;
             } 
@@ -422,7 +413,7 @@
                 display:flex;
            }
             #button-nav li {
-                /* display:flex; */
+                
                 flex:2;
            }
             .card-content h3 {
@@ -514,11 +505,11 @@
                 display: block;
                 flex: 2;
                 background: #333 url("./img/IMG_1910.JPG");
-                background-position: bottom center;
+                 background-position: bottom center; 
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 450px;
+                
                 z-index: -1;
                 opacity: 0.8;
         } 
@@ -529,54 +520,4 @@
         }
          
         
-        /* styling for start page 
-            .button-nav-info {
-                display: none;
-           }
-            #start-page {
-                display: flex;
-                flex-direction: row;
-                height: 100vh;
-           }
-            .card-start {
-                min-height:490px;
-           }
-            .box {
-                min-width: 175px;
-                min-height:150px;
-           }
-            .grid ul {
-                display: flex;
-                flex-direction: column;
-                flex-grow: 2;
-           }
-            .card-start {
-                flex-grow: 2;
-           }
-            .grid {
-                display: flex;
-                justify-content: space-around;
-           }
-            .card1, .card2, .card3 {
-                flex-grow: 1;
-           }
-            #parts-button {
-                margin: auto;
-                width: 50%;
-           }
-            .start-info p {
-                padding-top: 10px;
-                margin: 340px 10px 10px 10px;
-                background-color: #fff;
-                color: #333;
-                padding:10px;
-           }
-            .box-info {
-                display: block;
-                background-color: #fff;
-                color: #333;
-                margin: 10px;
-                font-size: 15px;
-           }
-       } */ 
         
