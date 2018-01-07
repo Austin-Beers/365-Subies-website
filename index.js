@@ -23,7 +23,7 @@ function returnToStartPage() {
 function renderStartPage() {
     headerState.gameStage = "start";
     const partsButton = `<button id="parts-button">Search Parts</button>`;
-    const galleryButton = `<button id="gallery-button">Our Gallery</button>`;
+    const galleryButton = `<button class="gallery-button">Our Gallery</button>`;
     const AAbutton = `<button id="AA-button">Search Accesories and Apparel </button>`;
     const heading = `<h1>365 Subaru</h1>`;
     $("#parts-button-id").html(partsButton);
@@ -31,7 +31,7 @@ function renderStartPage() {
     $("#aa-button-id").html(AAbutton);
     $("#parts-button").click(renderPartsPage);
     $("#AA-button").click(renderAAPage);
-    $("#gallery-button").click(renderGalleryPage);
+    $(".gallery-button").click(renderGalleryPage);
 
 };
 
