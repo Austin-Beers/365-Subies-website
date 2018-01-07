@@ -14,10 +14,11 @@
         }
         h1, h2, h3 {
             margin: 0;
-            padding: 1em 0;
+            padding: .5em 0;
        }
         .down-arrow{
             padding-top: 0;
+
         }
        h5 {
             padding-top: 20px;
@@ -29,35 +30,41 @@
        }
         p {
             margin: 0;
-            padding: 1em;
-       }
+            padding: .5em;
+            padding-top: .25em;
+            font-weight: bold;
+        }
         #start-form {
             min-height: 450px;
-            color: #fff;
             text-align: center;
-       }
+            border-bottom: 4px solid black;
+        }
+        .start-info{
+            color: black;
+            background-color: #fff;
+            
+        }
         #start-form .bg-image {
             position: absolute;
-            background: #333 url("./img/DSC_0076.JPG");
+            background: #333 url("./img/IMG_1910.JPG");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 450px;
             z-index: -1;
-            opacity: 0.5;
+            opacity: .8;
        }
         #start-form h1 {
-            padding-top: 50px;
             padding-bottom: 0;
-            font-size: 40px;
+            font-size: 30px;
        }
         #start-form .form-info-wrap {
             padding: 0 1.5em;
        }
-        #start-form p {
+        /* #start-form p {
             padding-top: 150px;
-       }
+       } */
         #back-button {
             width: 100%;
             height: 25px;
@@ -114,7 +121,8 @@
             border: 1px solid #666;
             margin: 0.5em 0;
        }
-        #parts-wrapper .bg-image2 {
+       
+       #parts-wrapper .bg-image2 {
             position: absolute;
             background: #333 url("./img/IMG_1786 (2).JPG");
             background-position: center;
@@ -194,7 +202,7 @@
             padding: 1em 2em;
             margin: 0.5em 0;
        }
-        #gallery-button {
+        .gallery-button {
             display: inline-block;
             background: #333;
             color: #fff;
@@ -203,20 +211,20 @@
             border: 1px solid #666;
             margin: 0.5em 0;
        }
-        #gallery-button:hover {
+        .gallery-button:hover {
             background: #eaeaea;
             color: #333;
        }
-        #gallery-button {
+        .gallery-button {
             display: inline-block;
             background: #333;
             color: #fff;
             text-decoration: none;
             padding: 1em 2em;
-            border: 1px solid #666;
+            border: 1px solid #333;
             margin: 0.5em 0;
        }
-        #gallery-button:hover {
+        .gallery-button:hover {
             background: #eaeaea;
             color: #333;
        }
@@ -233,7 +241,13 @@
             background: #eaeaea;
             color: #333;
        }
-        .card-content {
+        .box {
+            border: 3px solid black;
+       }
+       .grid{
+           background-color: #EC6E01;
+       }
+       .card-content {
             padding:10px;
             padding-top: 5px;
        }
@@ -276,69 +290,106 @@
             color: #333;
             text-decoration: none;
        }
+       .flex-image {
+           display: none;
+       }
+       .secondary-gallery {
+           display: none;
+       }
        /* media queries and flex-box */
        /*media query for 500px to 768px screen*/
-        @media only screen and (min-width: 500px) {
-           /* styling for start page */
-            h3 {
-                display: none;
-           }
+         @media only screen and (min-width: 600px) {
+            body{
+                text-align: left;
+            }
+           
+            .card-content {
+               padding-left: 0;
+               padding-bottom: 0;
+            }
+            
+           #parts-button {
+                display: block;
+                width: 75%;
+                border: 1px solid #333;
+            }
+            #AA-button {
+                display: block;
+                width: 75%;
+                border: 1px solid #333;
+                }
+            #start-form {
+                border: none;
+            }
+            .box {
+               border-top: 3px solid #EC6E01;
+               border-bottom: none;
+               border-left: 3px solid #333; 
+               border-right: none;
+               
+            }
+            .card-start {
+                display: flex;
+            }
+            .flex-image {
+                display: block;
+                flex: 2;
+                border-bottom: 3px solid #EC6E01;
+            }
+            .start-info {
+                flex: 1;
+            }
             #parts-button {
                 cursor: pointer;
            }
-            #gallery-button {
+            .gallery-button {
                 cursor: pointer;
            }
             #AA-button {
                 cursor: pointer;
            }
-            #start-form .bg-image {
+             #start-form .bg-image {
                 display: none;
-           }
-            #start-form {
+           } 
+            /* #start-form {
                 background-image: url("./img/DSC_0076.JPG");
                 background-size: 100% 100%;
-           }
+           } */
             .grid ul {
-                background: #333;
+                background: #fff;
            }
             .grid li {
                 background: #333;
                 margin: 20px 10px;
            }
-            .card1, .card2 {
+            .card1 {
                 width: 100%;
                 min-height: 150px;
            }
-            .card1:hover {
-                background-image: url("./img/IMG_4083.JPG");
-                background-size: 100% 100%;
-                width: 100%;
-                color:#fff;
-           }
-            .card2:hover {
-                background-image: url("./img/FullSizeRender (1).jpg");
-                background-size: 100% 100%;
-                color:#fff;
-                width: 100%;
-           }
-            .card3:hover {
-                background-image: url("./img/pexels-photo-13918_1_.jpg");
-                background-size: 100% 100%;
-                color:#fff;
-           }
-            .card1:hover + .parts-info {
+            .special {
+                display: none;
+            }
+           
+            .parts-info {
                 display: block;
            }
             #start-form p {
                 padding-top: 10px;
            }
-            .start-para p {
+            .start-info {
+               border-right: 3px solid #333;
+           }
+            .start-info p {
+                text-align: justify;
+                line-height: 2.25em;
                 padding-top: 10px;
-                margin-top: 210px;
                 background-color: #fff;
                 color: #333;
                 padding:10px;
+           }
+            .start-info h1 {
+                text-align: middle;
+                line-height: 2.75em;
            }
             .grid button {
                 align-items:center;
@@ -346,14 +397,20 @@
                 display:flex;
                 padding:20px 5px;
            }
-            img {
-                max-width:100%;
-           }
+          .bg-flex {
+                display: block;
+                flex: 2;
+                background: #333 url("./img/IMG_1910.JPG");
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 450px;
+                z-index: -1;
+                opacity: 0.8;
+            } 
             .wrapper {
                 margin: 0;
-           }
-            #button-nav a {
-                display: none;
            }
             #button-nav {
                 padding: 0px;
@@ -365,11 +422,8 @@
                 display:flex;
            }
             #button-nav li {
-                display:flex;
+                /* display:flex; */
                 flex:2;
-           }
-            .card-content p {
-                display: none;
            }
             .card-content h3 {
                 padding: 10px;
@@ -388,7 +442,7 @@
             #back-page {
                 margin-top: 0px 
            }
-           /* styling for aa page & parts page */
+            styling for aa page & parts page 
             #aa-result, #parts-result {
                 display: flex;
                 flex-wrap: wrap;
@@ -407,10 +461,75 @@
                 color: #333;
                 text-decoration: none;
            }
-       }
+            .secondary-gallery {
+                display: flex;
+                flex-direction: row-reverse;
+           }
+            .flex-card4 {
+                flex: 1;
+                background-color: #fff;
+                color: #333;
+
+           }
+            .flex-image2 {
+               flex: 1;
+               border-right: 3px solid #333;
+               border-top: 3px solid #EC6E01;
+            }
+            .bg2-flex {
+                display: block;
+                
+                background: #333 url("./img/FullSizeRender (1).jpg");
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 225px;
+                
+           } 
+            .card-title {
+                padding-left: 10px;
+           }
+           .form-info-wrap{
+               text-align: center;
+           }
+        } 
+
        /*media query for 769px plus screen*/
-        @media only screen and (min-width: 769px) { 
-           /* styling for start page */
+         @media only screen and (min-width: 769px) { 
+         .box {
+               margin-left: 0;
+               margin-bottom: 0;
+            }
+            #button-nav li {
+                display:flex; 
+                flex:2;
+           }
+            .gallery-button {
+                display: block;
+                width: 75%;
+                border: 1px solid #333;
+            }
+           .bg-flex {
+                display: block;
+                flex: 2;
+                background: #333 url("./img/IMG_1910.JPG");
+                background-position: bottom center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 450px;
+                z-index: -1;
+                opacity: 0.8;
+        } 
+        .secondary-gallery {
+            display: none;
+        }
+        
+        }
+         
+        
+        /* styling for start page 
             .button-nav-info {
                 display: none;
            }
@@ -445,7 +564,7 @@
                 margin: auto;
                 width: 50%;
            }
-            .start-para p {
+            .start-info p {
                 padding-top: 10px;
                 margin: 340px 10px 10px 10px;
                 background-color: #fff;
@@ -459,5 +578,5 @@
                 margin: 10px;
                 font-size: 15px;
            }
-       }
+       } */ 
         
