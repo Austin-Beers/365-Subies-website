@@ -101,7 +101,10 @@
             min-height: 450px;
             color: #fff;
             text-align: center;
-       }
+            transform: none;
+            perspective: none;
+            filter: none;
+        }
         #parts-search-button {
             display: inline-block;
             background: #333;
@@ -131,25 +134,52 @@
             z-index: -1;
             opacity: 0.35;
        }
-        #totalNum0 {
-            padding-top: 150px;
-       }
+       
         
         #parts-wrapper .form-info-wrap {
             padding: 0 1.5em;
        }
+        #totalNum0 {
+          position: fixed;
+          color: #333;
+          opacity: .9;
+          z-index: 1;
+          color: #333;
+          background-color: #EC6E01;
+          
+          height: 70px;
+          bottom: 0;
+          margin: 0.5em 0;
+        }
+       
+        #totalNum0 h5{
+            padding: 0;
+        }
         #get-more-parts {
-            background: #fff;
             color: #333;
             text-decoration: none;
-            padding: 1em 2em;
             margin: 0.5em 0;
-       }
+            padding: 1em 2em;
+            position: fixed;
+            color: #333;
+            opacity: .9;
+            z-index: 1;
+            color: #333;
+            background-color: #EC6E01;
+            font-size: .83em; 
+            height: 70px;
+            bottom: 0;
+            right: 0;
+            font-weight: bold;
+        }
         #aa-wrapper {
             min-height: 450px;
             color: #fff;
             text-align: center;
-       }
+            transform: none;
+            perspective: none;
+            filter: none;
+        }
         #aa-search-button {
             display: inline-block;
             background: #333;
@@ -179,9 +209,21 @@
             opacity: 0.35;
        }
         #totalNum1 {
-            padding-top: 200px;
+          position: fixed;
+          color: #333;
+          
+          z-index: 1;
+          color: #333;
+          background-color: #EC6E01;
+          opacity: .9;
+          height: 70px;
+          bottom: 0;
+          margin: 0.5em 0;
+        }
+       #totalNum1 h5{
+           padding: none;
        }
-        .form-info-wrap h1 {
+       .form-info-wrap h1 {
             padding-top: 50px;
             padding-bottom: 0;
             font-size: 30px;
@@ -191,15 +233,44 @@
         }
        #aa-wrapper .form-info-wrap {
             padding: 0 1.5em;
+            position: relative;
         }
-        
+        .aa-nav-cont {
+            background:  url("./img/IMG_1786 (2).JPG");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            z-index: -1;
+            
+        }
+        #aa-result {
+            position: absolute;
+            top: 480px;
+        }
         #get-more-aa {
-            background: #fff;
+            
             color: #333;
             text-decoration: none;
             padding: 1em 2em;
             margin: 0.5em 0;
-       }
+            
+            color: #333;
+            text-decoration: none;
+            padding: 1em 2em;
+            margin: 0.5em 0;
+            position: fixed;
+            color: #333;
+            
+            z-index: 1;
+            color: #333;
+            background-color: #EC6E01;
+            opacity: .9;
+            height: 70px;
+            bottom: 0;
+            right: 0;
+        }
         .gallery-button {
             display: inline-block;
             background: #333;
@@ -258,9 +329,6 @@
         #aa-page {
             display: none;
        }
-        #gallery-page {
-            display: none;
-       }
         #back-page {
             display: none;
        }
@@ -297,34 +365,65 @@
        /* media queries  */
        /*media query for 600px to 768px screen*/
          @media only screen and (min-width: 600px) {
+       
+            
             body{
                 text-align: left;
             }
            
             .card-content {
-               padding-left: 0;
-               padding-bottom: 0;
+            
+            min-height: 220px;
+            }
+            #parts-page{
+                position: relative;
             }
             
+            #parts-button-id{
+                position: absolute;
+                left:0;
+                bottom:0;
+            }
            #parts-button {
                 display: block;
-                width: 75%;
+                width: 225px;
                 border: 1px solid #333;
+                margin: 0;
+                cursor: pointer;
+            }
+            #aa-button-id{
+                position: absolute;
+                left:0;
+                bottom:0;
             }
             #AA-button {
                 display: block;
-                width: 75%;
+                width: 225px;
                 border: 1px solid #333;
-                }
+                margin: 0;
+                cursor: pointer;
+            }
+            .gallery-button {
+                margin: 0;
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 225px;
+                text-align: center;
+            }
             #start-form {
                 border: none;
             }
             .box {
-               border-top: 3px solid #EC6E01;
+               border-top: 3px solid #333;
                border-bottom: none;
                border-left: 3px solid #333; 
                border-right: none;
-               
+               height: 100%;
+                width: 100%;
+                min-height: 150px;
+               position: relative;
             }
             .card-start {
                 display: flex;
@@ -332,20 +431,11 @@
             .flex-image {
                 display: block;
                 flex: 5;
-                border-bottom: 3px solid #EC6E01;
+                border-bottom: 3px solid #333;
             }
             .start-info {
                 flex: 3;
             }
-            #parts-button {
-                cursor: pointer;
-           }
-            .gallery-button {
-                cursor: pointer;
-           }
-            #AA-button {
-                cursor: pointer;
-           }
              #start-form .bg-image {
                 display: none;
            } 
@@ -357,10 +447,8 @@
                 background: #333;
                 margin: 20px 10px;
            }
-            .card1 {
-                width: 100%;
-                min-height: 150px;
-           }
+            
+            
             .special {
                 display: none;
             }
@@ -386,8 +474,8 @@
                 align-items:center;
                 flex:1;
                 display:flex;
-                padding:20px 5px;
-           }
+                margin: 0;
+            }
           .bg-flex {
                 display: block;
                 flex: 2;
@@ -433,11 +521,13 @@
             #back-page {
                 margin-top: 0px 
            }
-            styling for aa page & parts page 
+      
             #aa-result, #parts-result {
                 display: flex;
                 flex-wrap: wrap;
-           }
+                position: absolute;
+                top: 480px;
+            }
             .aa-container, .parts-container {
                 margin: 10px;
                 padding: 20px;
@@ -455,17 +545,18 @@
             .secondary-gallery {
                 display: flex;
                 flex-direction: row-reverse;
-           }
+                padding-bottom: 5px;
+            }
             .flex-card4 {
                 flex: 1;
                 background-color: #fff;
                 color: #333;
-
+                position: relative;
            }
             .flex-image2 {
                flex: 1;
                border-right: 3px solid #333;
-               border-top: 3px solid #EC6E01;
+               border-top: 3px solid #333;
             }
             .bg2-flex {
                 display: block;
@@ -484,6 +575,26 @@
            .form-info-wrap{
                text-align: center;
            }
+        
+           .gallery-page{
+               display:flex;
+           }
+           
+           .gallery-div {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+           }
+           .gallery-div{
+               display: flex;
+           }
+           .gallery-div img {
+                margin: 10px;
+                border: 3px solid #000;
+                box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+                max-width: 25vw;
+          }
+        
         } 
 
        /*media query for 769px plus screen*/
@@ -498,10 +609,17 @@
            }
             .gallery-button {
                 display: block;
-                width: 75%;
+                width: 225px;
                 border: 1px solid #333;
             }
-           .bg-flex {
+           
+            .special{
+                height: 100%;
+                width: 100%;
+                min-height: 150px;
+
+            }
+            .bg-flex {
                 display: block;
                 flex: 2;
                 background: #333 url("./img/IMG_1910.JPG");

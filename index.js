@@ -16,8 +16,9 @@ function returnToStartPage() {
     $("#start-page").show()
     $("#back-page").hide()
     $("#parts-page").hide()
-    $("#gallery-page").hide()
+    $(".gallery-page").hide()
     $("#aa-page").hide()
+
 }
 
 function renderStartPage() {
@@ -26,22 +27,24 @@ function renderStartPage() {
     const galleryButton = `<button class="gallery-button">Our Gallery</button>`;
     const AAbutton = `<button id="AA-button">Search Accesories and Apparel </button>`;
     const heading = `<h1>365 Subaru</h1>`;
+    
     $("#parts-button-id").html(partsButton);
     $("#gallery-button-id").html(galleryButton);
     $("#aa-button-id").html(AAbutton);
     $("#parts-button").click(renderPartsPage);
     $("#AA-button").click(renderAAPage);
-    $(".gallery-button").click(renderGalleryPage);
-
+    $(".gallery-button").click(renderGalleryPage)
+    $(".gallery-page").hide();
 };
 
 function renderGalleryPage() {
-    alert("The gallery page is under construction. Sorry for the inconvenience!")
+    // alert("The gallery page is under construction. Sorry for the inconvenience!")
     //the gallery page is for applications furthur down the road with the club website.
-    // renderBackButton()
-    // $("#gallery-page").show();
-    // $("#start-page").hide();
-    // headerState.pageStage = "gallery";
+    renderBackButton()
+    $(".gallery-page").show();
+    // $(".gallery-div").show();
+    $("#start-page").hide();
+    headerState.pageStage = "gallery";
 
 }
 
