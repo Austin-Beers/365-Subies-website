@@ -38,11 +38,8 @@ function renderStartPage() {
 };
 
 function renderGalleryPage() {
-    // alert("The gallery page is under construction. Sorry for the inconvenience!")
-    //the gallery page is for applications furthur down the road with the club website.
     renderBackButton()
     $(".gallery-page").show();
-    // $(".gallery-div").show();
     $("#start-page").hide();
     headerState.pageStage = "gallery";
 

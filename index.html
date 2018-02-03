@@ -16,9 +16,8 @@
                       <div class="bg-image"></div>
                       <article class="start-info"aria-live="polite">
                         <h1>365 Subies</h1>
-                        <p>Our club application allows users to search for Subaru parts, accesories, and apparel through the Walmart and Etsy Application Program Interface. User navigation starts below with the search parts discription followed with a button to navigate to the parts page. The next usable navigation is the accesories and apparel section which has the search button inside consquenlty leading to the accesories and apparel page  </p>
-                          
-                      </article>
+                        <p>Our club application allows users to search for Subaru parts, accessories, and apparel through the Walmart and Etsy Application Program Interface. User navigation starts below with the search parts discription followed with a button to navigate to the parts page. The next usable navigation is the accessories and apparel section which has the search button inside consequently leading to the accesories and apparel page.  </p>
+                    </article>
                       <aside class="flex-image">
                           <a class="bg-flex"></a>
                       </aside>
@@ -37,7 +36,7 @@
                           </li>
                           <li class="special">
                               <article class="box">
-                                  <a class="img-card2"><img src="./img/IMG_4083.JPG" alt="frontal veiw subaru image"></a>
+                                  <a class="img-card2"><img src="./img/bean-bag2.jpg" alt="frontal veiw subaru image"></a>
                                   <legend class="card-content" id="content-container2">
                                       <h3 class="card-title">Subaru Gallery</h3>
                                       <p>Check out our 365 Subies members gallery by clicking the button below </p>
@@ -49,8 +48,8 @@
                               <article class="box">
                                   <a class="img-card3"><img src="./img/pexels-photo-13918_1_.jpg" alt="subaru love image"></a>
                                   <legend class="card-content" id="content-container3">
-                                      <h3 class="card-title">Subaru Apparel and Accesories</h3>
-                                      <p>Check out Subaru accesories and apparel by clicking the search button below</p>
+                                      <h3 class="card-title">Subaru Apparel and Accessories</h3>
+                                      <p>Check out Subaru accessories and apparel by clicking the search button below</p>
                                       <div id="aa-button-id" aria-live="assertive"></div>
                                   </legend>
                                 </article>
@@ -69,12 +68,11 @@
               </section>
               
               <section id="back-page"></section>
-  
-              <section id="parts-page" role="contentinfo">
+                 <section id="parts-page" role="contentinfo">
                   <article id="parts-wrapper">
-                      <header class="bg-image2"></header>
+                     <div class="parts-nav-container">
                       <nav class="form-info-wrap" aria-live="assertive">
-                          <h1>Check out our parts Data base!</h1>
+                          <h1>Subaru Aftermarket parts</h1>
                           <p>This data base pulls together related subaru parts by searching through the Walmart API with a subaru based search-term below. Each resulting item will display the title, the price and a thumbnail image. Each item is clickable and will bring you to the corresponding API host website. </p>
                           <form action="#" id="parts-search-form" role="search">
                               <input type="text" id="parts-search-input" aria-live="assertive">
@@ -82,14 +80,21 @@
                           </form>
                       </nav>
                        <div id="totalNum0" aria-live="assertive"></div>
-                      <div id="parts-result" aria-live="assertive"></div>
-  
-                      <button id="get-more-parts" hidden>load more</button>
+                     </div>
+                       <div id="parts-result" aria-live="assertive"></div>
+                        <button id="get-more-parts" hidden>load more</button>
                     </article>
               </section>
   
               <section class="gallery-page">
-                  <div class="gallery-div">
+                <div class="background">
+                    <div class="layer">
+                    </div>
+                </div>
+                <article class="gallery-head">
+                      <h1>Member Gallery</h1>
+                  </article>
+                <aside class="gallery-div">
                     <img src="./img/reid-friend.JPG" alt="Sample photo">
                     <img src="./img/nick-front.jpg" alt="Sample photo">
                     <img src="./img/bean-bag2.jpg" alt="Sample photo">
@@ -98,15 +103,14 @@
                     <img src="./img/bean-bag1.JPG" alt="Sample photo">
                     <img src="./img/nick-side-roller.jpg" alt="Sample photo">
                     <img src="./img/reid-front.JPG" alt="Sample photo">
-                  </div>
+                  </daside>
               </section>
   
               <section id="aa-page" role="contentinfo">
                   <article class="aa-wrapper">
                       <div class="aa-nav-cont">
-                    <!-- <header class="bg-image3"></header> -->
-                      <nav class="form-info-wrap" aria-live="assertive">
-                          <h1>Check out our accesories and apparel Data base!</h1>
+                         <nav class="form-info-wrap" aria-live="assertive">
+                          <h1>Subaru Accessories & Apparel</h1>
                           <p>This data base constructs a complation of items drawn from the Etsy API, search any key subaru word below to find related items. Each resulting item will display the title, the price and a thumbnail image. Each item is clickable and will bring you to the corresponding API host website.</p>
                           <form action="#" id="aa-search-form" role="search">
                               <input type="text" id="aa-search-input">
@@ -129,3 +133,5 @@
   </body>
   
   </html>
+
+  
